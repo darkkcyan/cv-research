@@ -36,11 +36,11 @@
 
 ### Tìm giao của 2 đường thẳng
 - Hai đường thẳng $l_1$ và $l_2$ sẽ có giao điểm $x = l_1 \times l_2$.
-- Thật vậy, $l_1(l_1 \times l_2) = 0$ và $l_2(l_1 \times l_2) = 0$, do vector $l_1 \times l_2$ trong không gian cùng song song với cả $l_1$ và $l_2$. Như vậy $l_1$ và $l_2$ đều đi qua điểm $l_1 \times l_2$
+> Thật vậy, $l_1(l_1 \times l_2) = 0$ và $l_2(l_1 \times l_2) = 0$, do vector $l_1 \times l_2$ trong không gian cùng song song với cả $l_1$ và $l_2$. Như vậy $l_1$ và $l_2$ đều đi qua điểm $l_1 \times l_2$
 
 ### Tìm đường thẳng qua 2 điểm
 - Hai điểm $p_1$ và $p_2$ có sẽ có đường thẳng $l = p_1 \times p2$ cùng đi qua chúng.
-- Cũng như trên, do $p_1.(p_1 \times p_2) = 0$ và $p_2.(p_1 \times p_2) = 0$. Như vậy $p_1$ và $p_2$ đều thuộc đường thằng $p_1 \times p_2$
+> Cũng như trên, do $p_1.(p_1 \times p_2) = 0$ và $p_2.(p_1 \times p_2) = 0$. Như vậy $p_1$ và $p_2$ đều thuộc đường thằng $p_1 \times p_2$
 
 ### Điểm và đuường thẳng ở vô cùng.
 - Các điểm có dạng $(x_1, x_2, 0)^T$ là những điểm ở vô cùng, vì ta không thể tìm thấy điểm $(x_1/0, x_2/0)$ trên mặt phẳng tọa độ.
