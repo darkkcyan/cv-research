@@ -69,6 +69,57 @@ Công thức trên đảm bảo góc luôn được giữ nguyên trên mặt ph
 Hệ quả, với $l^TC^*_\infty m= 0$ thì $l$ và $m$ vuông góc với nhau.
 
 ## Khôi phục tính metric từ hình ảnh.
-> TODO
+Ta sẽ sử dụng $C^*_\infty$ để khôi phục lại tính chất metric.
+Dưới phép biến đổi projective:
+$$
+\begin{aligned}
+    C^*_\infty\text{'} &= (H_P H_A H_S)C^*_\infty(H_P H_A H_S)^T \\
+    &= (H_P H_A)C^*_\infty(H_P H_A) \\
+    &= \begin{bmatrix}
+        KK^T & KK^T\mathbf{v} \\
+        \mathbf{v}^TKK^T & \mathbf{v}^TKK^T\mathbf{v}
+    \end{bmatrix}
+\end{aligned}
+$$
+
+Kết quả trên suy ra từ phân tích của projective transformation và vì $C^*_\infty$ không thay đổi sau khi thực hiện phép similarity.
+
+Nếu như ta có thể xác định được $C^*_\infty$ trên mặt phẳng, thì ta có thể khôi phục tính similarity (góc, cạnh, diện tích bằng nhau) của mặt phẳng đó.
+
+### Ví dụ: khôi phục từ mặt phẳng đã có tính affine.
+Vì mặt phẳng đang xét đã có tính affine nên
+$$
+C^*_\infty\text{'} = 
+\begin{bmatrix}
+    KK^T & 0\\
+    0^T & 0
+\end{bmatrix}
+$$
+
+(thay $v = 0$)
+
+Giả sử trên mặt phẳng ta đã xác định được 2 cặp đường tẳng $l_1, m_1$ và $l_2, m_2$ vuông góc với nhau, ta có:
+$$\begin{pmatrix}
+    l_{11} & l_{12} & l_{13} \\
+    l_{21} & l_{22} & l_{23}
+\end{pmatrix}C^*_\infty\text{'}
+\begin{pmatrix}
+    m_{11} & m_{21} \\
+    m_{12} & m_{22} \\
+    m_{13} & m_{23}
+\end{pmatrix}
+= \begin{pmatrix}0\\0\end{pmatrix}$$
+
+Dễ dàng nhận thấy $C^*_\infty\text{'}$ có dof 2 và ta có thể tính toán $C^*_\infty\text{'}$ từ phương trình trên ta có thể tính được luôn $C^*_\infty\text{'}$.
+
+![recover-affine-and-metrix-properties-example1](recover-affine-and-metrix-properties-example1.png)
+*Lại là cái sàn đó, nhưng lần này đẹp rồi! Khi ta biết 1 cặp đường thẳng (không song song) vuông góc, ta có thể khôi phục lại tính chất similarity*
+
+### Ví dụ: khôi phục hình ảnh từ ảnh ban đầu.
+
+Vì một conic bình thường có dof 5 nên thay vì 2 cặp đường thẳng như trên, ta cần 5 cặp đường thẳng, vậy là có thể xác định được $C^*_\infty\text{'}$.
+
+![recover-affine-and-metrix-properties-example2](recover-affine-and-metrix-properties-example2.png)
+*Ta có thể tìm $C^*_\infty\text{'}$ trực tiếp từ hình ban đầu mà không cần phải khôi phục tính affine từ 5 cặp đường thẳng vuông góc*
 
 ---
