@@ -8,19 +8,22 @@ Cụ thể, với điểm $x = (a, b, c)^T$ và matrix $H = \begin{bmatrix}
     h_{31} & h_{32} & h_{33}
 \end{bmatrix}$ thì:
 
-$$ h(x) =
-\begin{bmatrix}
-    h_{11} & h_{12} & h_{13} \\
-    h_{21} & h_{22} & h_{23} \\
-    h_{31} & h_{32} & h_{33}
-\end{bmatrix}
-\begin{pmatrix} a \\ b \\ c \end{pmatrix}
-= \begin{pmatrix}
-    ah_{11} + bh_{12} + ch_{13} \\
-    ah_{21} + bh_{22} + ch_{23} \\
-    ah_{31} + bh_{32} + ch_{33}
-\end{pmatrix}
-= \begin{pmatrix} a' \\ b' \\ c' \end{pmatrix}$$
+$$ 
+\begin{aligned}
+h(x) 
+    &= \begin{bmatrix}
+        h_{11} & h_{12} & h_{13} \\
+        h_{21} & h_{22} & h_{23} \\
+        h_{31} & h_{32} & h_{33}
+    \end{bmatrix}
+    \begin{pmatrix} a \\ b \\ c \end{pmatrix}\\
+    &= \begin{pmatrix}
+        ah_{11} + bh_{12} + ch_{13} \\
+        ah_{21} + bh_{22} + ch_{23} \\
+        ah_{31} + bh_{32} + ch_{33}
+    \end{pmatrix} \\
+    &= \begin{pmatrix} a' \\ b' \\ c' \end{pmatrix}
+\end{aligned}$$
 
 ## Phép biến đổi giữa 2 mặt phẳng
 ![central-projection](./transformations-central-projection.png)
