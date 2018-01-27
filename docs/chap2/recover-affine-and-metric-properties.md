@@ -3,7 +3,7 @@
 Bức ảnh có tình chất affine sẽ phải đảm bảo các góc bằng nhau ngoài đời thật thì bằng nhau trong ảnh, còn tính chất metric đảm bảo các đường thẳng bằng nhau ngoài đời thì phải bằng nhau trong ảnh. Phần này sẽ sơ lược qua cách khôi phục 2 tính chất trên từ một bức ảnh khi có thể xác định được một số yếu tố trong ảnh, cụ thể đó là đường thẳng tại vô cùng (line at infinity) $l_\infty$ và điểm tròn (circular point) nằm trên $l_\infty$.
 
 ## Đường thẳng tại vô cùng
-Như ta đã biết, $l_\infty = (0, 0, 1)^T$. Dưới projective transformation, $l_infty$ có thể được biến thành một đường không phải ở vô cùng, nhưng dưới affine transformation, $l_\infty$ không đổi (kiểm chứng bằng cách lấy $H^T . l_\infty$ sẽ ra 0, với $H$ là phép biến đổi affine).
+Như ta đã biết, $l_\infty = (0, 0, 1)^T$. Dưới projective transformation, $l_\infty$ có thể được biến thành một đường không phải ở vô cùng, nhưng dưới affine transformation, $l_\infty$ không đổi (kiểm chứng bằng cách lấy $H^T . l_\infty$ sẽ ra 0, với $H$ là phép biến đổi affine).
 
 Tuy rằng $l_\infty$ không đổi sau phép biến đổi affine nhưng các điểm ở vô cùng (nằm trên nó) lại không tương ứng 1-1 sau phép biến đổi này. 
 
@@ -113,7 +113,7 @@ $$\begin{pmatrix}
 Dễ dàng nhận thấy $C^*_\infty\text{'}$ có dof 2 và ta có thể tính toán $C^*_\infty\text{'}$ từ phương trình trên ta có thể tính được luôn $C^*_\infty\text{'}$.
 
 ![recover-affine-and-metrix-properties-example1](recover-affine-and-metrix-properties-example1.png)
-*Lại là cái sàn đó, nhưng lần này đẹp rồi! Khi ta biết 1 cặp đường thẳng (không song song) vuông góc, ta có thể khôi phục lại tính chất similarity*
+*Lại là cái sàn đó, nhưng lần này đẹp rồi! Khi ta biết 2 cặp đường thẳng (không song song) vuông góc, ta có thể khôi phục lại tính chất similarity*
 
 ### Ví dụ: khôi phục hình ảnh từ ảnh ban đầu.
 
