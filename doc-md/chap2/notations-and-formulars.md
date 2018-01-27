@@ -76,5 +76,11 @@ Nhận xét:
 
 **Dual coninc**: Conic trên còn được gọi là *point conic* vì nó xác định trên điểm. Áp dụng quy tắc đối lập, với mỗi point conic C sẽ có loại một conic $C^*$ khác xác định trên đường thẳng, gọi là *dual conic* hoặc *line conic*. Với mỗi đường thẳng $l$ là tiếp tuyến của $C$ thì thỏa mãn $l^TC^*l = 0$. Với mỗi ma trận khả nghịch $C$ thì $C^* = C^T$
 
+**Conic tạo bởi 2 đường thẳng**
+$$C = lm^T + ml^T$$
+Là conic quy biến gồm các điểm thuộc một trong hai đường thẳng.
+> Thật vậy với mỗi điểm $x$ thỏa mãn $l^Tx = 0$ thì $x^TCx = (x^Tl)(m^Tx) + (x^Tm)(l^Tx) = 0$.
+
+Ngoài ra ta còn có dual conic tạo bở hai điểm, conic gồm tất cả đường thẳng đi qua một trong hai điểm đó.
 
 ---

@@ -40,11 +40,28 @@ Như vậy với sự biến đổi điếm $x' = Hx$ thì đương thẳng $l$ 
 
 
 ## Phân cấp các loại biến đổi
-Phần này tập chung vào phép biến đổi affine và projective. Ở cấp độ thấp hơn gồm có phép:
-- Isometries: phép biến đổi đảm bảo khoảng cách Euclidean trên mặt phẳng và hệ quả là góc và diện tích được giữ nguyên. Những phép như tịnh tiến, xoay, lấy đối xứng, ... là phép Isometries. Xem thêm tại [wikepedia](https://en.wikipedia.org/wiki/Isometry).
-- Similarity: nó tương tự phép Isometries, và kết hợp thêm việc scale hình. Nó không đảm bảo độ dài, nhưng góc, tỉ lệ độ dài và tỉ lệ diện tích được dữ nguyên.
+Phần này tập chung vào phép biến đổi affine và projective. Ở cấp độ thấp nhất ta có phép biến đổi Isometries là phép biến đổi đảm bảo khoảng cách Euclidean trên mặt phẳng và hệ quả là góc và diện tích được giữ nguyên. Những phép như tịnh tiến, xoay, lấy đối xứng, ... là phép Isometries. Xem thêm tại [wikepedia](https://en.wikipedia.org/wiki/Isometry).
 
-Để đảm bảo dung lượng notes, 2 phép biến đổi trên không được đưa vào, nhưng biết được 2 phép đổi trên sẽ dễ dàng để hiểu phần dưới hơn.
+
+### Similarity transformations
+Tương tự phép Isometries, và kết hợp thêm việc scale hình. Nó không đảm bảo độ dài, nhưng góc, tỉ lệ độ dài và tỉ lệ diện tích được dữ nguyên.
+
+$$
+\begin{pmatrix} x' \\ y' \\ z' \end{pmatrix}
+= \begin{bmatrix}
+    s.cos\theta & -s.sin\theta & t_x \\
+    s.sin\theta & s.cos\theta & t_y \\
+    0 & 0 & 1
+\end{bmatrix}
+\begin{pmatrix} x \\ y \\ z \end{pmatrix}
+$$
+
+Hay biểu diễn ma trận ở dạng block:
+$$ x' = H_Sx = \begin{bmatrix}
+sR& t \\ 0^T & 1
+\end{bmatrix}x$$
+
+Với $t = (t_x, t_y)^T$ và $0^T = (0, 0)$. Phép similarity đảm bảo "hình dáng" của hình ban đầu và có dof 4. Ma trận này có thể tính toán trực tiếp từ hai cặp điểm tương ứng trên mặt phẳng.
 
 ### Affine transformations
 
@@ -68,7 +85,7 @@ A & t \\ 0^T & 1
 với $A = \begin{bmatrix}
     a_{11} & a_{12} \\
     a_{21} & a_{22}
-\end{bmatrix}$, $t = (t_x, t_y)^T$ và $0^T = (0, 0)$
+\end{bmatrix}$
 
 ![Affine-transformation](transformations-affine-transformation.png)
 *Ví dụ về phép biến đổi affine. Hình thứ 2: đầu tiên ta xoay hình vuông theo góc $\phi$, dãn hình theo trục tung và co hình theo trục hoành rồi xoay hình lại góc $-\phi$*
@@ -116,5 +133,25 @@ $$
 \end{pmatrix}
 $$
 lại cho ra một điểm bình tường. Điều này cho phép projective transformation **dựng lên những điểm ở vô cùng**.
+
+### Phân tích Projective transformations
+Ta có thể phân tích một projective transformation thành các transformations khác nhau, mỗi transformation có cấp bậc cao hơn transformation trước nó.
+
+$$H = H_S H_A H_P
+= \begin{bmatrix}
+    sR & t \\ 0^T & 1
+\end{bmatrix}
+\begin{bmatrix}
+    K & 0 \\ 0^T & 1
+\end{bmatrix}
+\begin{bmatrix}
+    I & 0 \\
+    \mathbf{v}^T & v
+\end{bmatrix}
+=\begin{bmatrix}A & t \\ \mathbf{v}^T & v\end{bmatrix}
+$$
+
+Trong đó $A = sKR + t\mathbf{v}^T$ và $detK = 1$.
+$H_S, H_A, H_P$ lần lượt là các phép biến đổi similarity, affine và projective (chỉ biến đổi tham số thứ 3 $z$).
 
 ---
