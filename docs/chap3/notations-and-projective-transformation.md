@@ -1,5 +1,8 @@
-# Quy ước và phép biến đổi xạ ảnh.
-> Khi nói đến sự scale của matrix, ta hiểu 2 matrix $A$ và $\alpha A$ với $\forall \alpha \ne 0$ đều chỉ một matrix nếu như matrix này đồng nhất.
+# Quy ước và phép biến đổi xạ ảnh
+
+> Note: Khi nói đến sự scale của matrix, ta hiểu 2 matrix $A$ và $\alpha A$ với $\forall \alpha \ne 0$ đều chỉ một matrix nếu như matrix này đồng nhất.
+
+> Note: projective có nghĩa là xạ ảnh trong tiếng Việt.
 
 ## Điểm
 Trên $\mathbb{P}^2$, tọa độ điểm là 1 vector 3 chiều thì trong $\mathbb{P} ^ 3$ vector này sẽ có 4 chiều. Cụ thể, vector $(x_1, x_2, x_3, x_4)^T$ trên hệ tọa độ đồng nhất sẽ biểu diễn điểm có tọa độ $(x_1/x_4, x_2/x_4, x_3/x_4)^T$ trên hệ tọa độ không đồng nhất khi $x_4 \ne 0$.
@@ -130,16 +133,8 @@ $$W = \begin{bmatrix}
 \end{bmatrix}$$
 
 Như vậy:
-- Không gian vector của các điểm sinh bởi $W^T$ là họ các điểm có dạng $\lambda A + \mu B$, nằm trên cùng một đường thẳng.
-- Tương tự như vậy, không gian vector sinh bởi nhân có dim 2 của $W$ chính là họ các mặt phẳng đi qua đường thẳng.
-
-> Khó hiểu enough???? Người dịch cũng khó hiểu :smile:, vậy để người dịch giải thích:
-> - Không gian vector sinh bởi $W^T$ chính là các vector có dạng $W^T (\lambda, \mu)$, hay chính là tổ hợp tuyến tính của 2 điểm $A$ và $B$ và không gian vector này là họ các điểm nằm trên đường thẳng.
-> - Nhân có dim 2 của $W$ là matrix $4 \times 2$ rank 2 $V$ bất kì, mà $WV = 0$. Và như trên, không gian vector sinh bởi $V$ là các vector có dạng $V (\lambda, \mu)$ và không gian vector này là họ các mặt phẳng chứa đường thẳng.
-
-Nhận xét trên có thể chứng minh như sau:
-- Với 2 điểm $A'$ và $B'$ khác cũng nằm trên đường thẳng sẽ tạo ra matrix $W'$, tuy khác $W$ nhưng không gian vector sinh bởi chúng sẽ giống nhau, như vậy từ không gian vector được sinh, ta suy ra biểu diễn cũng giống nhau.
-- Đường thẳng $P$ sẽ chứa đường thẳng khi $WP = 0$ (nói cách khác $P$ đi qua cả điểm $A$ và $B$), và với 2 mặt phẳng $P$ và $Q$ không trùng nhau giao nhau tại đường thẳng, ta có matrix $\begin{bmatrix} P & Q \end{bmatrix}$ dim 2 chính là nhân của $W$. Và không gian vector sinh bởi $P$ và $Q$ sẽ là họ các mặt phẳng chứa đường thẳng.
+- Không gian cột của $W^T$ là họ các điểm có dạng $\lambda A + \mu B$, nằm trên cùng một đường thẳng.
+- Nhân của $W$ là không gian vector có dim 2 và là họ các mặt phẳng đi qua đường thẳng.
 
 #### Biểu diễn đường thẳng theo 2 mặt phẳng
 Biểu diễn đối lập với biểu diễn trên là ta sử dụng mặt phẳng thay vì điểm:
@@ -147,8 +142,8 @@ Biểu diễn đối lập với biểu diễn trên là ta sử dụng mặt ph
 $$W^* = \begin{bmatrix} P^T \\ Q^T \end{bmatrix}$$
 
 Và các tính chất cũng tương tự:
-- Không gian vector sinh bởi $W^{*T}$ là họ các mặt phẳng chứa đường thẳng.
-- Không gian vector sinh bởi nhân 2 chiều của $W$ là họ các điểm thuộc đường thẳng.
+- Không gian cột của $W^{*T}$ là họ các mặt phẳng chứa đường thẳng.
+- Nhân của $W$ là họ các điểm thuộc đường thẳng.
 
 Ngoài ra ta có thể nhận thấy $WW^{*T} = W^TW^* = 0$.
 
