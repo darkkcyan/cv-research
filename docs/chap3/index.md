@@ -4,3 +4,4 @@ Trong chương này, các khái niệm và phép biến đổi đều khá giố
 
 @import "./notations-and-projective-transformation.md"
 @import "./the-hierarchy-of-transformations.md"
+@import "./special-entitys-of-projective-space.md"
